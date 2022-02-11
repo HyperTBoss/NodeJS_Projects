@@ -40,7 +40,7 @@ function CombineStringToID(RandomArrayOfStrings = null){//name, group ='', tag='
 }
 
 //This function will interate through values and functions. And another array that will iterate through args.
-function renderFormInputs(name, UseStateArray, [ //Array of Arguments starts.
+function renderFormInputs(name, inputLabelName, UseStateArray, [ //Array of Arguments starts.
   htmlForText = "Text Input", 
   autoFocusBool = false, 
   width = 100, 
@@ -56,7 +56,7 @@ function renderFormInputs(name, UseStateArray, [ //Array of Arguments starts.
     let setValueFunction = UseStateArrayMember[1]
     return(
       <FormControl id = {CombineStringToID([name])} name={name}>
-        <InputLabel htmlFor={htmlForText}>Email address</InputLabel>
+        <InputLabel htmlFor={htmlForText}>{inputLabelName}</InputLabel>
         <Input
           autoFocus={autoFocusBool}
           fullWidth={fullWidthBool}
